@@ -1,0 +1,66 @@
+@keyframes waitAndLoad {
+	from {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+
+	}
+	50%{
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+
+	}
+}
+
+.loading{
+	-webkit-animation: waitAndLoad .8s linear .4s infinite ;
+	-o-animation: waitAndLoad .8s linear .4s infinite ;
+	animation: waitAndLoad .8s linear .4s infinite ;
+}
+
+.icon-paper-plane{
+	-webkit-transition:all .3s linear;
+	-moz-transition:all .3s linear;
+	-ms-transition:all .3s linear;
+	-o-transition:all .3s linear;
+	transition:all .3s linear;
+	
+}
+
+.makeBottom{
+	bottom: 0!important;
+}
+
+/*Pre loader*/
+@keyframes loader{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+.preloader{
+  animation:loader 1s infinite linear;
+}
+.preloader::after{
+  animation:loader 2s infinite linear;
+}
+
+.preloader::before{
+  animation:loader 3s infinite linear;
+}
